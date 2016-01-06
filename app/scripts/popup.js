@@ -10,10 +10,20 @@ function addBookmark(parentFolder){
 		//  the array has only one element
 		var tab = array_of_Tabs[0];
 		// ... do something with url variable
-		var bookmark = {title: tab.title, url: tab.url, parentId: parentFolder.id};
-		chrome.bookmarks.create(bookmark);
-		window.close();
+		chrome.bookmarks.search(tab.url,
+			function(BookmarksArray){
+				var bookmark = {title: tab.title, url: tab.url, parentId: parentFolder.id};
+				if(BookmarksArray.length > 0){
+					if(BookmarksArray[0].parentId !== parentFolder.id){
+						chrome.bookmarks.create(bookmark);
+					}
+				} else {
+					chrome.bookmarks.create(bookmark);
+				}
+			}
+		);
 	});
+	window.close();
 }
 
 // MAIN FUNCTION
