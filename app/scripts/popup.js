@@ -15,15 +15,14 @@ function addBookmark(parentFolder){
 				var bookmark = {title: tab.title, url: tab.url, parentId: parentFolder.id};
 				if(BookmarksArray.length > 0){
 					if(BookmarksArray[0].parentId !== parentFolder.id){
-						chrome.bookmarks.create(bookmark);
+						chrome.bookmarks.create(bookmark, window.close);
 					}
 				} else {
-					chrome.bookmarks.create(bookmark);
+					chrome.bookmarks.create(bookmark, window.close);
 				}
 			}
 		);
 	});
-	window.close();
 }
 
 // MAIN FUNCTION
@@ -35,8 +34,7 @@ chrome.bookmarks.search('ReadNowBookmarks',
 			//Bookmark folder does not exist
 			var bookmark = {title: 'ReadNowBookmarks'};
 			chrome.bookmarks.create(bookmark, function(createdFolder){
-				addBookmark(createdFolder);
-				window.close();
+				addBookmark(createdFolder, window.close);
 			});
 		}
 	}
