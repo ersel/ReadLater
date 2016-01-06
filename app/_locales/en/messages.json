@@ -4,7 +4,7 @@
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "Saves current tab&#39;s URL for later reading...",
+    "message": "Saves current tab's URL for later reading, ReadNow extension companion.",
     "description": "The description of the application"
   }
 }
