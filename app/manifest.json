@@ -1,10 +1,11 @@
 {
-  "name": "__MSG_appName__",
-  "version": "0.0.1",
+  "name": "ReadLater: Bookmarks in a queue",
+  "version": "0.0.11",
   "manifest_version": 2,
-  "description": "__MSG_appDescription__",
+  "description": "Simply click a button to queue a web-page for later reading. Use together with the ReadNow extension.",
   "icons": {
     "16": "images/icon-16.png",
+    "96": "images/icon-96.png",
     "128": "images/icon-128.png"
   },
   "default_locale": "en",
