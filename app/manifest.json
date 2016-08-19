@@ -1,6 +1,6 @@
 {
   "name": "ReadLater: Bookmarks in a queue",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "manifest_version": 2,
   "description": "Simply click a button to queue a web-page for later reading. Use together with the ReadNow extension.",
   "icons": {
